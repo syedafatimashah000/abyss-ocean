@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#03111f">
+<meta name="description" content="Explore the real mysteries of the deep ocean, from glowing life to the deepest trenches.">
+<title>Ocean Mysteries — ABYSS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+:root{--ocean:#03111f;--panel:#071d2d;--line:rgba(133,207,241,.2);--cyan:#70d9ff;--muted:#b6cbd9;--white:#f3fbff}
+*{box-sizing:border-box}.mystery-page{background:var(--ocean);color:var(--white)}
+.mystery-hero{position:relative;isolation:isolate;min-height:570px;display:flex;align-items:center;overflow:hidden;background:#020b14 url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=2000&q=85') center 48%/cover no-repeat}
+.mystery-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(2,10,21,.96),rgba(2,15,29,.68) 52%,rgba(2,15,29,.15)),linear-gradient(0deg,#03111f 0%,transparent 42%)}
+.mystery-hero .wrap{width:min(1120px,calc(100% - 44px));margin:auto;padding:90px 0 110px}.mystery-hero .eyebrow,.mystery-heading .eyebrow{color:var(--cyan);font-size:11px;letter-spacing:.25em;font-weight:800}
+.mystery-hero h1{font:800 clamp(45px,8vw,92px)/.98 Manrope,sans-serif;letter-spacing:-.045em;color:#e7f8ff;text-shadow:0 5px 35px #00101f;margin:20px 0}.mystery-hero h1 span{display:block;color:var(--cyan)}
+.mystery-hero .intro{max-width:620px;color:#d6e5ee;line-height:1.9;font-size:16px}.mystery-hero .hero-tag{display:inline-flex;gap:9px;align-items:center;border:1px solid rgba(112,217,255,.35);background:rgba(3,25,42,.58);padding:9px 13px;border-radius:99px;color:#d6f4ff;font-size:11px;letter-spacing:.12em}
+.mystery-content{padding:54px 0 72px}.mystery-content .wrap{width:min(1120px,calc(100% - 44px));margin:auto}.mystery-heading{margin-bottom:28px;max-width:750px}.mystery-heading h2{font:800 clamp(26px,4vw,40px)/1.15 Manrope,sans-serif;margin:10px 0 12px}.mystery-heading p{color:var(--muted);font-size:14px;line-height:1.9}
+.mystery-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.mystery-card{padding:0;overflow:hidden;border:1px solid var(--line);border-radius:17px;background:linear-gradient(155deg,#0a263a,#061522);transition:transform .25s,border-color .25s;min-width:0}.mystery-card:hover{transform:translateY(-5px);border-color:rgba(112,217,255,.65)}.mystery-card img{display:block;width:100%;height:190px;object-fit:cover;filter:saturate(.85);border-bottom:1px solid var(--line)}.mystery-card .card-body{padding:20px 21px 23px}.mystery-card .number{color:var(--cyan);font-size:10px;letter-spacing:.2em;font-weight:800}.mystery-card h3{font:750 18px Manrope,sans-serif;margin:10px 0 9px;color:#effaff}.mystery-card p{font-size:13px;color:#b7cbdc;line-height:1.8;margin:0}.mystery-card .caption{display:block;color:#77b8d3;font-size:10px;letter-spacing:.08em;margin-top:14px;text-transform:uppercase}
+.fact-strip{margin-top:23px;border:1px solid rgba(54,186,255,.25);border-radius:16px;padding:26px 28px;background:linear-gradient(105deg,rgba(5,49,72,.9),rgba(5,21,35,.95));display:grid;grid-template-columns:55px 1fr;gap:18px;align-items:start}.fact-icon{font-size:32px}.fact-strip h3{font:750 20px Manrope,sans-serif;margin:0 0 8px;color:#c8ecff}.fact-strip p{font-size:13px;line-height:1.85;color:#bfd0df;margin:0}.back-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.mystery-hero .btn,.back-row .btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none}.mystery-hero .btn.outline,.back-row .btn.outline{border:1px solid rgba(160,213,239,.3)}
+.light-mode.mystery-page{background:#eaf6fc;color:#08243a}.light-mode .mystery-card{background:#f5fbff}.light-mode .mystery-card h3{color:#09233a}.light-mode .mystery-card p,.light-mode .mystery-heading p,.light-mode .fact-strip p{color:#3e5b70}.light-mode .fact-strip{background:#d6effb}.light-mode .fact-strip h3{color:#092b43}.light-mode .mystery-hero{color:white}
+@media(max-width:820px){.mystery-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.mystery-hero{min-height:500px}}
+@media(max-width:560px){.mystery-cards{grid-template-columns:1fr}.mystery-card img{height:210px}.mystery-hero{min-height:490px;background-position:58% center}.mystery-hero .wrap{padding:70px 0 82px;width:calc(100% - 34px)}.mystery-content .wrap{width:calc(100% - 34px)}.mystery-hero .intro{font-size:14px}.fact-strip{grid-template-columns:1fr;padding:22px;gap:8px}}
+</style>
+</head>
+<body class="mystery-page">
+<header class="nav">
+<a class="brand" href="index.html" aria-label="Abyss home"><span class="brand-mark">≋</span><span>ABYSS</span></a>
+<nav class="navlinks" id="navlinks"><a href="index.html">Home</a><a href="index.html#creatures">Creatures</a><a href="index.html#depths">Ocean Depths</a><a class="active" href="#mysteries">Mysteries</a></nav>
+<div class="navtools"><button class="iconbtn" id="themeToggle" aria-label="Toggle light mode" title="Toggle theme">☼</button><button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button></div>
+</header>
+<main>
+<section class="mystery-hero" id="mysteries"><div class="wrap">
+<p class="hero-tag">✦ &nbsp; ABYSS FIELD NOTES &nbsp; / &nbsp; 001</p><p class="eyebrow">EXPLORE THE UNKNOWN</p>
+<h1>Ocean <span>Mysteries</span></h1>
+<p class="intro">Beneath the waves lies a world that is difficult to reach and still full of unanswered questions. Explore remarkable deep-sea life, extreme environments, strange sounds and discoveries that help scientists understand our blue planet.</p>
+<div class="back-row"><a class="btn" href="#discoveries">Start Exploring <span>⟶</span></a><a class="btn outline" href="index.html">← Back to ABYSS</a></div>
+</div></section>
+<section class="mystery-content" id="discoveries"><div class="wrap">
+<div class="mystery-heading"><p class="eyebrow">BELOW THE SURFACE</p><h2>What makes the deep ocean mysterious?</h2><p>Sunlight fades as depth increases. Temperatures drop, pressure rises, and many animals survive in ways that seem almost otherworldly. Here are some of the biggest real-life mysteries scientists investigate.</p></div>
+<div class="mystery-cards">
+<article class="mystery-card"><img loading="lazy" src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=900&q=80" alt="Blue glowing underwater scene"><div class="card-body"><span class="number">01 / LIVING LIGHT</span><h3>Creatures That Glow</h3><p>Many deep-sea organisms create their own light through bioluminescence. It can help them attract prey, communicate or disappear into the darkness.</p><span class="caption">Nature's own blue lanterns</span></div></article>
+<article class="mystery-card"><img loading="lazy" src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=900&q=80" alt="Vast blue ocean surface"><div class="card-body"><span class="number">02 / THE UNEXPLORED</span><h3>A Vast Hidden World</h3><p>The deep seafloor is difficult to reach and map. Robotic explorers and powerful cameras continue to reveal landscapes humans have never seen directly.</p><span class="caption">A world waiting to be mapped</span></div></article>
+<article class="mystery-card"><img loading="lazy" src="https://images.unsplash.com/photo-1498623116890-37e912163d5d?auto=format&fit=crop&w=900&q=80" alt="Dark ocean depths"><div class="card-body"><span class="number">03 / EXTREME PRESSURE</span><h3>Life in the Trenches</h3><p>Pressure increases enormously with depth, yet specially adapted animals survive in ocean trenches. Their biology challenges what we know about life's limits.</p><span class="caption">Survival under pressure</span></div></article>
+<article class="mystery-card"><img loading="lazy" src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=900&q=80" alt="Ocean waves beneath a moody sky"><div class="card-body"><span class="number">04 / STRANGE SOUNDS</span><h3>Sounds Beneath the Waves</h3><p>Underwater microphones capture sounds from animals, shifting ice, earthquakes and ships. Researchers investigate unusual recordings before drawing conclusions.</p><span class="caption">Listen closely to the ocean</span></div></article>
+<article class="mystery-card"><img loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=900&q=80" alt="Underwater marine ecosystem"><div class="card-body"><span class="number">05 / OCEAN OASES</span><h3>Hydrothermal Vents</h3><p>Hot, mineral-rich water rises from cracks in the seafloor. Around these vents, communities thrive using energy from chemical reactions instead of sunlight.</p><span class="caption">Life without sunlight</span></div></article>
+<article class="mystery-card"><img loading="lazy" src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&w=900&q=80" alt="Large marine animal swimming underwater"><div class="card-body"><span class="number">06 / GIANTS OF THE DEEP</span><h3>The Elusive Giant Squid</h3><p>The giant squid was once known mostly from remains and sailors' tales. Scientists have since documented living animals, but much about their deep-sea lives remains unknown.</p><span class="caption">A real animal, still mysterious</span></div></article>
+</div>
+<div class="fact-strip"><div class="fact-icon">⌁</div><div><h3>One of Earth's deepest places</h3><p>Challenger Deep, in the Mariana Trench, is the deepest known point of the ocean. Exact depth estimates vary with measurement methods, but it is nearly 11 kilometres below sea level. The darkness, cold and pressure make exploration especially challenging.</p></div></div>
+<div class="fact-strip"><div class="fact-icon">✧</div><div><h3>Mystery vs. myth</h3><p>The deep ocean inspires legends, but a good scientific explanation depends on evidence. Unidentified sounds or unusual sightings are not automatically proof of sea monsters or lost civilizations. Researchers test ideas using observations, measurements and repeatable methods.</p></div></div>
+<div class="back-row"><a class="btn" href="index.html#creatures">Meet the Creatures <span>⟶</span></a><a class="btn outline" href="index.html#quiz">Take the Ocean Quiz <span>⟶</span></a></div>
+</div></section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><a class="brand" href="index.html"><span class="brand-mark">≋</span><span>ABYSS<small>Dive Deeper. Discover More.</small></span></a><nav class="footlinks"><a href="index.html">Home</a><span>|</span><a href="index.html#creatures">Creatures</a><span>|</span><a href="index.html#depths">Ocean Depths</a></nav><div class="copyright">© 2026 ABYSS. Explore responsibly.</div></div></footer>
+<script>
+document.getElementById('themeToggle').addEventListener('click',()=>document.body.classList.toggle('light-mode'));
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navlinks').classList.toggle('open'));
+document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+</script>
+</body>
+</html>
